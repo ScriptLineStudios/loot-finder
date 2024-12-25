@@ -644,14 +644,14 @@ void usage(void) {
 }
 
 int main(int argc, char **argv) {
-    RNG rng = rng_new();
+    // RNG rng = rng_new();
 
-    uint64_t i = rng_set_decoration_seed(&rng, 11342447246ull, 28963264, -382544); //We have the population seed, we now have to bruteforce a location + world seed that gives us this population seed...
-    rng_set_feature_seed(&rng, i, 10, 4); //decoration step. THIS IS THE DECORATOR SEED, its a function of the population seed above. Reversing it gives the population seed above.
+    // uint64_t i = rng_set_decoration_seed(&rng, 11342447246ull, 28963264, -382544); //We have the population seed, we now have to bruteforce a location + world seed that gives us this population seed...
+    // rng_set_feature_seed(&rng, i, 10, 4); //decoration step. THIS IS THE DECORATOR SEED, its a function of the population seed above. Reversing it gives the population seed above.
 
-    uint64_t loot_seed = rng_next_long(&rng);
-    printf("%" PRIu64 "\n", loot_seed);
-    return 0;
+    // uint64_t loot_seed = rng_next_long(&rng);
+    // printf("%" PRIu64 "\n", loot_seed);
+    // return 0;
 
     if (argc <= 1) {
         usage();
